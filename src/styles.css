@@ -1,0 +1,22 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+div.card-header {
+  color: #3cba9f
+}
+
+nav {
+  color: #3cba9f
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-question-mark {
+  fill: grey
+}

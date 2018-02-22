@@ -1,0 +1,11 @@
+<div class="card text-white bg-dark mb-3">
+    <div class="card-header">Oldest Tasks</div>
+    <table class="table table-striped table-hover table-dark">
+        <tbody>
+            <tr *ngFor="let task of oldestTasks()">
+                <td>{{task.content}}</td>
+                <td>{{task.age}} days</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
