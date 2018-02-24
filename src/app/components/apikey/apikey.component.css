@@ -1,0 +1,11 @@
+div.help-block {
+    padding-top:20px
+}
+
+input {
+    max-width: 400px;
+}
+
+div.help-block  h5 {
+    padding-left: 28px
+}

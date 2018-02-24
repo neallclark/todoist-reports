@@ -1,37 +1,37 @@
-import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent }  from './app.component';
-import { SummaryComponent } from './components/summary/summary.component';
-import { TaskListComponent } from './components/tasklist/tasklist.component';
-import { OldestComponent } from './components/oldest/oldest.component';
-import { WeeklyChartComponent } from './components/weekly/weeklychart.component';
-import { CumulativeCountChartComponent } from './components/cumulativecount/cumulative.count.chart.component';
-import { ApiKeyComponent } from './components/apikey/apikey.component';
-import { ProjectInfoComponent } from './components/projectinfo/projectinfo.component';
+import { AppComponent } from './app.component';
+import { ApikeyComponent } from './components/apikey/apikey.component';
+import { CumulativeCountChartComponent } from './components/cumulative-count-chart/cumulative-count-chart.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { OldestComponent } from './components/oldest/oldest.component';
+import { ProjectInfoComponent } from './components/project-info/project-info.component';
+import { SummaryComponent } from './components/summary/summary.component';
+import { TasklistComponent } from './components/tasklist/tasklist.component';
+import { WeeklyChartComponent } from './components/weekly-chart/weekly-chart.component';
 
 import { TodoistService } from './services/todoist.service';
-import { TaskListService} from './services/tasklist.service';
+import { TasklistService } from './services/tasklist.service';
 
 @NgModule({
-  imports:      [ 
-                  BrowserModule, 
-                  HttpClientModule
-                ],
-  declarations: [ 
-                  AppComponent,
-                  SummaryComponent,
-                  TaskListComponent,
-                  OldestComponent,
-                  WeeklyChartComponent,
-                  CumulativeCountChartComponent,
-                  ApiKeyComponent,
-                  ProjectInfoComponent,
-                  NavbarComponent
-                ],
-  providers:    [ TodoistService, TaskListService ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent,
+    ApikeyComponent,
+    CumulativeCountChartComponent,
+    NavbarComponent,
+    OldestComponent,
+    ProjectInfoComponent,
+    SummaryComponent,
+    TasklistComponent,
+    WeeklyChartComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [ TodoistService, TasklistService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -1,29 +1,29 @@
 <div class="card text-white bg-dark mb-3">
-    <div class="card-header">Getting Started</div>
-    <form style="padding:10px">
-        <div style="padding-top:10px">
-            <p>1. Get your Todoist API token. 
-                <a class="btn btn-secondary" src href="https://todoist.com/Users/viewPrefs?page=integrations" role="button">
-                    <img alt="Todoist" src="app/resources/img/todoist.svg">
-                </a>
-            </p>
-        </div>
-        <div class="form-group">        
-            <label for="apiKeyInpuy">2. Enter your API token</label>
-            <input type="text" placeholder="API Token here..." style="max-width:400px" class="form-control" id="apiKeyInput" (keyup)="onKey($event)"/>
-        </div>
-        <div>
-            <p>3. View information about your oldest tasks, general stats, a week ahead chart and cumulative task count by age chart</p>
-        </div>
-        <div style="padding-top:20px">
-            <div>
-                <svg class="icon float-left">
-                        <use href="app/resources/img/icons8-help.svg#surface1" class="icon-question-mark"></use>
-                </svg>  
-                <h5 style="padding-left:28px">Help</h5>
-            </div>
-            <p>Your API Token is found in Todoist's settings under integrations.</p>
-            <p>We don't store this, it is just used to make a one-off call to the api (See Github source to see how it all works)</p>
-        </div>
-    </form>
+  <div class="card-header">Getting Started</div>
+  <form class="card-body">
+      <div>
+          <p>1. Get your Todoist API token. 
+              <a class="btn btn-secondary" href="https://todoist.com/Users/viewPrefs?page=integrations" role="button">
+                  <img alt="Todoist" class="todoist-btn">
+              </a>
+          </p>
+      </div>
+      <div class="form-group">        
+          <label for="apiKeyInpuy">2. Enter your API token</label>
+          <input type="text" placeholder="API Token here..." class="form-control" id="apiKeyInput" (keyup)="onKey($event)"/>
+      </div>
+      <div>
+          <p>3. View information about your oldest tasks, general stats, a week ahead chart and cumulative task count by age chart</p>
+      </div>
+      <div class="help-block">
+          <div>
+              <svg class="icon float-left">
+                <use href="assets/img/icons8-help.svg#surface1" class="icon-question-mark"></use>
+              </svg>  
+              <h5>Help</h5>
+          </div>
+          <p>Your API Token is found in Todoist's settings under integrations.</p>
+          <p>We don't store this, it is just used to make a one-off call to the api (See Github source to see how it all works)</p>
+      </div>
+  </form>
 </div>

@@ -1,0 +1,15 @@
+th.task {
+    width: 60%
+}
+
+th.due-date {
+    width: 20%
+}
+
+th.age {
+    width: 10%
+}
+
+th.repeats {
+    width: 10%
+}

@@ -1,17 +1,17 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { Task } from './../../models/task';
-import { TaskListService } from '../../services/tasklist.service';
+import { TasklistService } from './../../services/tasklist.service';
 import { Chart } from 'chart.js';
 
-
 @Component({
-    selector: 'cumulativecountchart',
-    templateUrl: './cumulative.count.chart.component.html'
+  selector: 'app-cumulative-count-chart',
+  templateUrl: './cumulative-count-chart.component.html',
+  styleUrls: ['./cumulative-count-chart.component.css']
 })
 export class CumulativeCountChartComponent implements OnChanges {
-    @Input() tasks: Array<Task>;
+  @Input() tasks: Array<Task>;
 
-    constructor(private _taskListService: TaskListService){}
+constructor(private _taskListService: TasklistService){}
 
     ngOnChanges() {
         if(this.tasks == null)

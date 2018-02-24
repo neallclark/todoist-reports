@@ -1,29 +1,28 @@
-
-<navbar></navbar>
-<div class="container-fluid" style="padding:10px">
+<app-navbar></app-navbar>
+<div class="container-fluid">
         
     <div class="row">
-        <apikey class="col-6" (onApiKeyEntered)="onApiKeyEntered($event)"></apikey>
-        <projectinfo class="col-6"></projectinfo>
+        <app-apikey class="col-6" (onApiKeyEntered)="onApiKeyEntered($event)"></app-apikey>
+        <app-project-info class="col-6"></app-project-info>
     </div>
 
     <div class="row">
         <div class="col-6">
-            <summary [hidden]="tasks==null" [tasks]="tasks"></summary>
+            <app-summary [hidden]="tasks==null" [tasks]="tasks"></app-summary>
         </div>
         <div class="col-6">
-            <oldest [hidden]="tasks==null" [tasks]="tasks"></oldest>
+            <app-oldest [hidden]="tasks==null" [tasks]="tasks"></app-oldest>
         </div>
     </div>
 
     <div class="row">
-        <weeklychart class="col-6" [hidden]="tasks==null" [tasks]="tasks"></weeklychart>
-        <cumulativecountchart class="col-6" [hidden]="tasks==null" [tasks]="tasks"></cumulativecountchart>
+        <app-weekly-chart class="col-6" [hidden]="tasks==null" [tasks]="tasks"></app-weekly-chart>
+        <app-cumulative-count-chart class="col-6" [hidden]="tasks==null" [tasks]="tasks"></app-cumulative-count-chart>
     </div>
 
     <div class="row">
         <div class="col-sm">
-            <tasklist [hidden]="tasks==null" [tasks]="tasks"></tasklist>
+            <app-tasklist [hidden]="tasks==null" [tasks]="tasks"></app-tasklist>
         </div>
     </div>
 

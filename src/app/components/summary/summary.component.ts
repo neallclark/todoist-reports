@@ -1,49 +1,50 @@
 import { Component, Input } from '@angular/core';
 import { Task } from './../../models/task';
-import { TaskListService } from '../../services/tasklist.service';
+import { TasklistService } from './../../services/tasklist.service';
 
 @Component({
-    selector: 'summary',
-    templateUrl: './summary.component.html'
+  selector: 'app-summary',
+  templateUrl: './summary.component.html',
+  styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent {
-    @Input() tasks: Array<Task>;
+  @Input() tasks: Array<Task>;
+  
+  constructor(private _tasklistService: TasklistService){}
 
-    constructor(private _tasklistService: TaskListService){}
+  numOfTasks() : number {
+      return this.tasks ? this.tasks.length : null;
+  }
 
-    numOfTasks() : number {
-        return this.tasks ? this.tasks.length : null;
-    }
+  numOfRepeatingTasks() : number {
+      return this.tasks ? this._tasklistService.repeatingTasks(this.tasks).length : null;
+  }
+  
+  numOfScheduledTasks() : number {
+      return this.tasks ? this._tasklistService.scheduledTasks(this.tasks).length : null;
+  }
+  
+  numOfUnscheduledTasks() : number {
+      return this.tasks ? this._tasklistService.unscheduledTasks(this.tasks).length : null;
+  }
+  
+  maxAge() : number {
+      return this._tasklistService.maxAge(this.tasks);
+  }
+  
+  averageAge() : number {
+      return this._tasklistService.averageAge(this.tasks);
+  }
+  
+  nonRepeatingTasks() : Array<Task> {
+      return this._tasklistService.nonRepeatingTasks(this.tasks);
+  }
 
-    numOfRepeatingTasks() : number {
-        return this.tasks ? this._tasklistService.repeatingTasks(this.tasks).length : null;
-    }
-    
-    numOfScheduledTasks() : number {
-        return this.tasks ? this._tasklistService.scheduledTasks(this.tasks).length : null;
-    }
-    
-    numOfUnscheduledTasks() : number {
-        return this.tasks ? this._tasklistService.unscheduledTasks(this.tasks).length : null;
-    }
-    
-    maxAge() : number {
-        return this._tasklistService.maxAge(this.tasks);
-    }
-    
-    averageAge() : number {
-        return this._tasklistService.averageAge(this.tasks);
-    }
-    
-    nonRepeatingTasks() : Array<Task> {
-        return this._tasklistService.nonRepeatingTasks(this.tasks);
-    }
+  numOfOverdueTasks() : number {
+      return this.tasks ? this._tasklistService.overdueTasks(this.tasks).length : null;
+  }
 
-    numOfOverdueTasks() : number {
-        return this.tasks ? this._tasklistService.overdueTasks(this.tasks).length : null;
-    }
-
-    numOfTasksNext7Days() : number {
-        return this.tasks ? this._tasklistService.tasksDueBetweenDays(this.tasks,0,7).length : null;
-    }
+  numOfTasksNext7Days() : number {
+      return this.tasks ? this._tasklistService.tasksDueBetweenDays(this.tasks,0,7).length : null;
+  }
 }
