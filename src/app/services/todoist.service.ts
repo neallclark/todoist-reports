@@ -14,11 +14,13 @@ export class TodoistService {
   constructor(private http:HttpClient) {}
   
      private tasks : Observable<TasksResponse>;
+
+     url = 'https://radiant-beyond-86884.herokuapp.com';
  
      getTasks(apiKey: string) : Observable<TasksResponse>{
          if(this.tasks == null) {
              var query = `{allTasks(key:"${apiKey}"){id content completed priority dateString due dateAdded repeating age}}`;
-             this.tasks = this.http.get<TasksResponse>(`http://localhost:4000/graphql?query=${query}`);
+             this.tasks = this.http.get<TasksResponse>(`${this.url}/graphql?query=${query}`);
          }
  
          return this.tasks;
