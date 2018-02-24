@@ -1,21 +1,21 @@
 <div class="card text-white bg-dark mb-3">
-    <div class="card-header">All Tasks</div>
-    <table class="table table-striped table-hover table-dark">
-        <thead>
-            <tr>
-                <th style="width:60%">Task</th>
-                <th style="width:20%">Due Date</th>
-                <th style="width:10%">Age</th>
-                <th style="width:10%">Repeats</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let task of tasks">
-                <td>{{task.content}}</td>
-                <td>{{formatDate(task.due)}}</td>
-                <td>{{task.age}}</td>
-                <td>{{task.repeating}}</td>
-            </tr>
-        </tbody>
-    </table>
+  <div class="card-header">All Tasks</div>
+  <table class="table table-striped table-hover table-dark">
+      <thead>
+          <tr>
+              <th class="task">Task</th>
+              <th class="due-date">Due Date</th>
+              <th class="age">Age</th>
+              <th class="repeats">Repeats</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let task of tasks">
+              <td>{{task.content}}</td>
+              <td>{{formatDate(task.due)}}</td>
+              <td>{{task.age}}</td>
+              <td>{{task.repeating}}</td>
+          </tr>
+      </tbody>
+  </table>
 </div>

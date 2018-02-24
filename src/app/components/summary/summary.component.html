@@ -1,15 +1,15 @@
 <div class="card text-white bg-dark mb-3">
-    <div class="card-header">Overall Statistics</div>
-    <table class="table table-striped table-hover table-dark">
-        <tbody>
-            <tr><td>Total tasks</td><td>{{numOfTasks()}}</td></tr>
-            <tr><td>Repeating tasks</td><td>{{numOfRepeatingTasks()}}</td></tr>
-            <tr><td>Scheduled tasks</td><td>{{numOfScheduledTasks()}}</td></tr>
-            <tr><td>Unscheduled tasks</td><td>{{numOfUnscheduledTasks()}}</td></tr>
-            <tr><td>Overdue tasks</td><td>{{numOfOverdueTasks()}}</td></tr>
-            <tr><td>Tasks due in next 7 days</td><td>{{numOfTasksNext7Days()}}</td></tr>
-            <tr><td>Age of oldest task</td><td>{{maxAge()}} days</td></tr>
-            <tr><td>Average age of tasks</td><td>{{averageAge() | number:'1.0-1'}} days</td></tr>
-        </tbody>
-    </table>
+  <div class="card-header">Overall Statistics</div>
+  <table class="table table-striped table-hover table-dark">
+      <tbody>
+          <tr><td>Total tasks</td><td>{{numOfTasks()}}</td></tr>
+          <tr><td>Repeating tasks</td><td>{{numOfRepeatingTasks()}}</td></tr>
+          <tr><td>Scheduled tasks</td><td>{{numOfScheduledTasks()}}</td></tr>
+          <tr><td>Unscheduled tasks</td><td>{{numOfUnscheduledTasks()}}</td></tr>
+          <tr><td>Overdue tasks</td><td>{{numOfOverdueTasks()}}</td></tr>
+          <tr><td>Tasks due in next 7 days</td><td>{{numOfTasksNext7Days()}}</td></tr>
+          <tr><td>Age of oldest task</td><td>{{maxAge()}} days</td></tr>
+          <tr><td>Average age of tasks</td><td>{{averageAge() | number:'1.0-1'}} days</td></tr>
+      </tbody>
+  </table>
 </div>
