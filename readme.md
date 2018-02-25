@@ -19,7 +19,7 @@ If it has been incative for a while it will be slow to load.
 1. Get your todoist api key (Clicking the button on screen takes you to the settings page where the key is located).
 1. Put it in the box, this then makes one call off to the todoist api (via the GraphQL server) to retrieve the tasks. It isn't stored anywhere, if you come back to the site later you will have to enter it again.
 
-![Start Screen](https://github.com/neallclark/todoist-reports/tree/master/documentation/start-screen.png)
+![Start Screen](https://raw.githubusercontent.com/neallclark/todoist-reports/master/documentation/start-screen.png)
 
 #### Charts and Tables
 
@@ -28,7 +28,7 @@ If it has been incative for a while it will be slow to load.
 1. Tasks Due By Day (Next 7) - Shows the number of tasks per day that are coming up over the next 7 days. Day 0 is all overdue tasks.
 1. Cumulative Task Count By Age - Shows the number of active tasks added by age. Taking the chart in the screenshot as an example it highlights that most of my tasks were added in the last 90 days. Any tasks that don't get completed in 90 days tend to sit on my task list forever!
 
-![Charts](https://github.com/neallclark/todoist-reports/tree/master/documentation/tables-and-charts.png)
+![Charts](https://raw.githubusercontent.com/neallclark/todoist-reports/master/documentation/tables-and-charts.png)
 
 #### What Next?
 Ideas welcome! You can submit some ideas on the issues page [here](https://github.com/neallclark/todoist-reports/issues).
